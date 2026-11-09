@@ -1,8 +1,46 @@
+# Dependencies
 node_modules/
-dist/
+.pnp
+.pnp.js
 
-.env*
+# Production & Build outputs
+dist/
+build/
+out/
+.next/
+
+# Environment files (keeps example template safe)
+.env
+.env*.local
+.env.development
+.env.test
+.env.production
 !.env.example
 
-.vscode/
+# Debug / Runtime logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor & IDE configs
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
 .idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Caches
+.eslintcache
+.cache/
+.turbo/
