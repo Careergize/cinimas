@@ -275,12 +275,8 @@ export default function Preloader({ onComplete }) {
             />
           </div>
 
-          {/* Status Indicators & Counter */}
-          <div className="w-full flex items-center justify-between text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-neutral-400">
-            <span className="flex items-center gap-1.5 text-neutral-300">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span>{progress < 100 ? "Loading Reel" : "Curtain Ready"}</span>
-            </span>
+          {/* Counter */}
+          <div className="w-full flex items-center justify-center text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-neutral-400">
             <span className="font-semibold text-white/90 tabular-nums">
               {progress.toString().padStart(2, "0")}%
             </span>
