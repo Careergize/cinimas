@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { MapPin, Navigation, Phone, Mail, Clock, ExternalLink, Sparkles, ArrowUpRight } from "lucide-react";
+import { MapPin, Navigation, Phone, Mail, Clock, ExternalLink, UserCheck, ArrowUpRight } from "lucide-react";
 import { CONTACT_INFO } from "../data/content";
 
 export default function LocationMapSection() {
@@ -51,8 +51,8 @@ export default function LocationMapSection() {
           >
             <div>
               <div className="flex items-center justify-between pb-4 mb-4 border-b border-white/5">
-                <span className="text-xs font-mono uppercase tracking-wider text-rose-400 font-medium flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-rose-500 animate-ping" />
+                <span className="text-xs font-mono uppercase tracking-wider text-amber-400 font-medium flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping" />
                   Verified Production Facility
                 </span>
                 <span className="text-[11px] font-mono text-neutral-400">
@@ -66,30 +66,43 @@ export default function LocationMapSection() {
               >
                 {CONTACT_INFO.companyName}
               </h3>
-              <p className="text-xs sm:text-sm text-neutral-400 mt-2 flex items-start gap-2 font-light">
-                <MapPin className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
+              <a 
+                href={CONTACT_INFO.address.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs sm:text-sm text-neutral-300 hover:text-amber-300 mt-2 flex items-start gap-2 font-light transition-colors group cursor-pointer"
+              >
+                <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                 <span>{CONTACT_INFO.address.full}</span>
-              </p>
+              </a>
 
-              {/* Minimalist Visual Coordinates Canvas */}
-              <div className="mt-8 rounded-2xl bg-[#08080c] border border-white/10 p-6 relative overflow-hidden h-52 flex flex-col justify-between">
-                <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+              {/* Real Interactive Embedded Google Map */}
+              <div className="mt-8 rounded-2xl overflow-hidden border border-amber-400/25 relative h-72 sm:h-84 w-full shadow-2xl bg-[#08080c] group">
+                <iframe
+                  title="Grace Cinemas International Studio Headquarters Map"
+                  src="https://maps.google.com/maps?q=Rajiv+Gandhi+Nagar,+Nalanchira,+Thiruvananthapuram+695015&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  className="w-full h-full border-0 brightness-[0.88] contrast-[1.05] grayscale-[15%] hover:grayscale-0 hover:brightness-100 transition-all duration-500"
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
 
-                {/* Subtle radar pulse circles */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full border border-white/10 animate-ping" style={{ animationDuration: '4s' }} />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full border border-white/15" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-rose-500/20 border border-rose-500/40 flex items-center justify-center">
-                  <div className="w-3 h-3 rounded-full bg-rose-500 shadow-[0_0_12px_#e11d48]" />
-                </div>
+                {/* Direct Google Maps link overlay */}
+                <a
+                  href={CONTACT_INFO.address.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-3 right-3 z-10 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0a0a0f]/90 hover:bg-black text-amber-300 hover:text-white border border-amber-400/35 text-xs font-mono tracking-wider backdrop-blur-md transition-all shadow-xl active:scale-95"
+                >
+                  <Navigation className="w-3.5 h-3.5 text-amber-400 animate-pulse" />
+                  <span>Open in Google Maps</span>
+                  <ExternalLink className="w-3 h-3 text-amber-400" />
+                </a>
 
-                <div className="relative z-10 flex justify-between text-[11px] font-mono text-neutral-400">
-                  <span className="bg-black/60 px-2 py-0.5 rounded border border-white/10">{CONTACT_INFO.address.area}</span>
-                  <span className="text-white bg-black/60 px-2 py-0.5 rounded border border-white/10">Active Desk</span>
-                </div>
-
-                <div className="relative z-10 flex justify-between items-end text-[11px] font-mono text-neutral-400">
-                  <span className="bg-black/60 px-2 py-0.5 rounded border border-white/10">8.5441° N, 76.9423° E</span>
-                  <span className="text-neutral-300 bg-black/60 px-2 py-0.5 rounded border border-white/10">Thiruvananthapuram</span>
+                {/* Studio Location Pill Overlay */}
+                <div className="absolute top-3 left-3 z-10 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/10 text-[10px] font-mono uppercase tracking-wider text-neutral-300 flex items-center gap-1.5 pointer-events-none">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                  <span>Nalanchira Studio HQ</span>
                 </div>
               </div>
             </div>
@@ -137,10 +150,10 @@ export default function LocationMapSection() {
               <div className="mt-8 flex flex-col gap-4 text-xs font-mono">
                 {/* Phone */}
                 <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 flex items-start gap-3">
-                  <Phone className="w-4 h-4 text-rose-400 mt-1 shrink-0" />
+                  <Phone className="w-4 h-4 text-amber-400 mt-1 shrink-0" />
                   <div>
                     <span className="text-[10px] text-neutral-500 uppercase block">Official Phone / Hotline</span>
-                    <a href={CONTACT_INFO.phoneTel} className="text-white hover:text-rose-400 font-medium text-sm transition-colors block mt-0.5">
+                    <a href={CONTACT_INFO.phoneTel} className="text-white hover:text-amber-300 font-medium text-sm transition-colors block mt-0.5">
                       {CONTACT_INFO.phone}
                     </a>
                   </div>
@@ -148,10 +161,10 @@ export default function LocationMapSection() {
 
                 {/* Email */}
                 <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 flex items-start gap-3">
-                  <Mail className="w-4 h-4 text-rose-400 mt-1 shrink-0" />
+                  <Mail className="w-4 h-4 text-amber-400 mt-1 shrink-0" />
                   <div className="min-w-0">
                     <span className="text-[10px] text-neutral-500 uppercase block">Project Pitches & Screenplays</span>
-                    <a href={`mailto:${CONTACT_INFO.email}`} className="text-white hover:text-rose-400 transition-colors truncate block mt-0.5">
+                    <a href={`mailto:${CONTACT_INFO.email}`} className="text-white hover:text-amber-300 transition-colors truncate block mt-0.5">
                       {CONTACT_INFO.email}
                     </a>
                   </div>
@@ -159,10 +172,10 @@ export default function LocationMapSection() {
 
                 {/* Casting Email */}
                 <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 flex items-start gap-3">
-                  <Sparkles className="w-4 h-4 text-rose-400 mt-1 shrink-0" />
+                  <UserCheck className="w-4 h-4 text-amber-400 mt-1 shrink-0" />
                   <div className="min-w-0">
                     <span className="text-[10px] text-neutral-500 uppercase block">Casting & Audition Reels</span>
-                    <a href={`mailto:${CONTACT_INFO.castingEmail}`} className="text-white hover:text-rose-400 transition-colors truncate block mt-0.5">
+                    <a href={`mailto:${CONTACT_INFO.castingEmail}`} className="text-white hover:text-amber-300 transition-colors truncate block mt-0.5">
                       {CONTACT_INFO.castingEmail}
                     </a>
                   </div>

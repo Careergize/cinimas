@@ -29,8 +29,8 @@ export default function CastingSection({ onOpenConsultation }) {
               className="text-3xl sm:text-5xl font-normal text-white tracking-[-0.03em] leading-tight"
               style={{ fontFamily: "Outfit, sans-serif" }}
             >
-              Statewide casting notices <br className="hidden sm:inline" />
-              across all 14 districts.
+              Global casting notices <br className="hidden sm:inline" />
+              for international cinema.
             </h2>
           </div>
 
@@ -63,14 +63,14 @@ export default function CastingSection({ onOpenConsultation }) {
                     {call.projectTitle}
                   </span>
                   <span className="text-neutral-400 flex items-center gap-1.5 shrink-0">
-                    <Calendar className="w-3 h-3 text-rose-400" />
+                    <Calendar className="w-3 h-3 text-amber-400" />
                     <span>Deadline: {call.deadline}</span>
                   </span>
                 </div>
 
                 {/* Role Title */}
                 <h3
-                  className="text-2xl font-medium text-white tracking-tight group-hover:text-rose-300 transition-colors"
+                  className="text-2xl font-medium text-white tracking-tight group-hover:text-amber-200 transition-colors"
                   style={{ fontFamily: "Outfit, sans-serif" }}
                 >
                   {call.role}
@@ -99,18 +99,18 @@ export default function CastingSection({ onOpenConsultation }) {
               <div className="mt-8 pt-5 border-t border-white/5 flex items-center justify-between">
                 <a
                   href={`mailto:${call.submissionEmail}?subject=Audition Submission: ${encodeURIComponent(call.projectTitle)} - ${encodeURIComponent(call.role)}`}
-                  className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 hover:border-white/50 text-white transition-all text-xs font-mono tracking-wider uppercase"
+                  className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 hover:border-amber-400/50 text-white hover:text-amber-200 transition-all text-xs font-mono tracking-wider uppercase"
                 >
-                  <Mail className="w-3.5 h-3.5 text-rose-400" />
+                  <Mail className="w-3.5 h-3.5 text-amber-400" />
                   <span>Send Audition Reel</span>
                 </a>
 
                 <button
                   onClick={() => setSelectedCall(call)}
-                  className="text-xs font-mono text-neutral-400 hover:text-white flex items-center gap-1 transition-colors cursor-pointer"
+                  className="text-xs font-mono text-neutral-400 hover:text-amber-200 flex items-center gap-1 transition-colors cursor-pointer"
                 >
                   <span>Guidelines</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-rose-400" />
+                  <ArrowRight className="w-3.5 h-3.5 text-amber-400" />
                 </button>
               </div>
             </motion.div>
@@ -126,21 +126,21 @@ export default function CastingSection({ onOpenConsultation }) {
         >
           <div className="flex items-start gap-4">
             <div className="w-10 h-10 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center shrink-0 text-white mt-0.5">
-              <AlertCircle className="w-5 h-5 text-rose-400" />
+              <AlertCircle className="w-5 h-5 text-amber-400" />
             </div>
             <div>
               <h4 className="text-base font-medium text-white tracking-tight" style={{ fontFamily: "Outfit, sans-serif" }}>
                 General Audition Guidelines for Actors
               </h4>
               <p className="text-xs text-neutral-400 mt-1 max-w-xl leading-relaxed font-light">
-                Submit recent unfiltered photographs, a Malayalam self-intro video (&lt; 60s), and monologue links to <strong className="text-white font-mono">{CONTACT_INFO.castingEmail}</strong>. No audition registration fees are ever charged.
+                Submit recent unfiltered photographs, a self-intro video (&lt; 60s), and monologue links to <strong className="text-white font-mono">{CONTACT_INFO.castingEmail}</strong>. No audition registration fees are ever charged.
               </p>
             </div>
           </div>
 
           <a
             href={`mailto:${CONTACT_INFO.castingEmail}?subject=General Talent Registration - Grace Cinemas`}
-            className="px-6 py-2.5 rounded-full border border-white/20 hover:border-white/50 text-white font-medium text-xs font-mono uppercase tracking-wider shrink-0 transition-colors"
+            className="px-6 py-2.5 rounded-full border border-white/20 hover:border-amber-400/50 text-white hover:text-amber-200 font-medium text-xs font-mono uppercase tracking-wider shrink-0 transition-colors"
           >
             Register Profile
           </a>
@@ -165,7 +165,7 @@ export default function CastingSection({ onOpenConsultation }) {
                 <X className="w-5 h-5" />
               </button>
 
-              <span className="text-[10px] font-mono uppercase tracking-wider text-rose-400 font-semibold px-2.5 py-0.5 rounded-full bg-rose-500/10 border border-rose-500/20">
+              <span className="text-[10px] font-mono uppercase tracking-wider text-amber-400 font-semibold px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20">
                 Audition Notice
               </span>
 

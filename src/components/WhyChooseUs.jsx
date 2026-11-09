@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { 
   ShieldCheck, 
-  Sparkles, 
   Zap, 
   Cpu, 
   CheckCircle2, 
@@ -163,17 +162,17 @@ export default function WhyChooseUs({ onOpenConsultation }) {
               Let's discuss your brand's visual identity.
             </h3>
             <p className="text-xs sm:text-sm text-neutral-400 mt-1">
-              Call our creative directors directly at <strong className="text-white font-mono">1234567890</strong> or schedule a discovery meeting.
+              Call our creative directors directly at <strong className="text-white font-mono">+91 98765 43210</strong> or schedule a discovery meeting.
             </p>
           </div>
 
           <div className="flex items-center gap-3 shrink-0">
             <a
-              href="tel:1234567890"
+              href="tel:+919876543210"
               className="px-6 py-3 rounded-full bg-gradient-to-r from-rose-600 to-amber-500 text-white font-bold text-xs sm:text-sm flex items-center gap-2 hover:scale-105 transition-transform shadow-[0_0_20px_rgba(225,29,72,0.4)]"
             >
               <PhoneCall className="w-4 h-4" />
-              <span>Call 1234567890</span>
+              <span>Call +91 98765 43210</span>
             </a>
 
             <button

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { 
   Calculator, 
-  Sparkles, 
   Check, 
   Clock, 
   ShieldCheck, 
@@ -14,7 +13,8 @@ import {
   Mic, 
   PhoneCall, 
   Zap,
-  Layers
+  Layers,
+  Video
 } from "lucide-react";
 
 export default function CinemaCostCalculator({ onOpenConsultation }) {
@@ -42,7 +42,7 @@ export default function CinemaCostCalculator({ onOpenConsultation }) {
       id: "content_creation", 
       label: "Content Creation", 
       sub: "Reels & Digital Stories", 
-      icon: Sparkles, 
+      icon: Video, 
       baseDays: 7, 
       baseCost: 35000,
       desc: "Batch creation of high-performing short-form video reels, product showcases, and viral digital assets."
@@ -328,11 +328,11 @@ export default function CinemaCostCalculator({ onOpenConsultation }) {
             {/* Direct Call & Booking CTAs */}
             <div className="mt-8 flex flex-col gap-3">
               <a
-                href="tel:1234567890"
+                href="tel:+919876543210"
                 className="w-full py-4 rounded-2xl bg-gradient-to-r from-rose-600 via-rose-500 to-amber-500 text-white font-bold text-sm flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-95 transition-all shadow-[0_0_30px_rgba(225,29,72,0.4)]"
               >
                 <PhoneCall className="w-4 h-4" />
-                <span>Call Directly: 1234567890</span>
+                <span>Call Directly: +91 98765 43210</span>
               </a>
 
               <button

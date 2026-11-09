@@ -4,7 +4,6 @@ import {
   Camera, 
   Mic, 
   Tv, 
-  Sparkles, 
   Check, 
   PhoneCall, 
   Clock, 
@@ -14,7 +13,8 @@ import {
   Layers, 
   Calendar,
   Volume2,
-  ChevronRight
+  ChevronRight,
+  Package
 } from "lucide-react";
 
 export default function StudioEquipmentRentals({ onOpenConsultation }) {
@@ -25,6 +25,7 @@ export default function StudioEquipmentRentals({ onOpenConsultation }) {
   const [studioSetup, setStudioSetup] = useState("video-podcast");
 
   const gearCategories = [
+    { id: "kits", label: "Official GCR Kits (Basic • Pro • Cinema)", icon: Package },
     { id: "cameras", label: "Cinema Cameras", icon: Camera },
     { id: "lighting", label: "Studio Softboxes & Lighting", icon: Zap },
     { id: "audio", label: "Audio & Microphones", icon: Mic },
@@ -32,6 +33,32 @@ export default function StudioEquipmentRentals({ onOpenConsultation }) {
   ];
 
   const gearList = {
+    kits: [
+      {
+        id: "basic_creator_kit",
+        name: "Basic Creator Kit (GCR)",
+        badge: "Creator Favorite",
+        spec: "Sony FX3 / High-Res Body • Prime Lens • DJI Wireless Audio • Compact Rig",
+        dailyRate: 3500,
+        includes: ["Sony FX3 / Mirrorless 4K Body", "35mm Cine Prime Lens", "DJI Mic 2 Wireless System", "Compact Rig / Handheld Cage", "Batteries & High-Speed Media"]
+      },
+      {
+        id: "pro_video_kit",
+        name: "Pro Video Kit (GCR)",
+        badge: "Commercial Pro",
+        spec: "Sony FX6 Cinema Camera • Cine Zoom Set • Dual Wireless Sound • Softbox Lighting",
+        dailyRate: 6000,
+        includes: ["Sony FX6 Full-Frame Cinema Line", "24-70mm & 70-200mm Fast Lenses", "Dual Wireless Lavalier Audio", "Studio LED Keylight & Softbox", "Fluid Head Tripod & V-Mount"]
+      },
+      {
+        id: "cinema_pro_kit",
+        name: "Cinema Pro Kit (GCR)",
+        badge: "Theatrical Cinema",
+        spec: "RED Komodo 6K / Cinema Line Package • Full Set Cine Primes • Wireless Video & Focus",
+        dailyRate: 9500,
+        includes: ["RED Komodo 6K Cinema Package", "Full Set T1.5 High-Speed Primes", "Wireless Director Monitor Link", "Tilta Wireless Follow Focus", "Heavy Carbon Fluid Tripod"]
+      }
+    ],
     cameras: [
       {
         id: "fx6",
@@ -399,11 +426,11 @@ export default function StudioEquipmentRentals({ onOpenConsultation }) {
 
                 <div className="mt-6 flex flex-col gap-2.5">
                   <a
-                    href="tel:1234567890"
+                    href="tel:+919876543210"
                     className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-rose-600 to-amber-500 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-95 transition-all shadow-[0_0_25px_rgba(225,29,72,0.4)]"
                   >
                     <PhoneCall className="w-4 h-4" />
-                    <span>Check Gear Dates (Call 1234567890)</span>
+                    <span>Check Gear Dates (Call 9876543210)</span>
                   </a>
 
                   <button
@@ -474,6 +501,10 @@ export default function StudioEquipmentRentals({ onOpenConsultation }) {
                     <Mic className="w-3.5 h-3.5 text-rose-400" />
                     <span>Shure Broadcast</span>
                   </div>
+                </div>
+
+                <div className="mt-4 pt-3 border-t border-white/5 text-[11px] font-mono text-neutral-400">
+                  <span className="text-amber-400">Notice:</span> Post-production services are charged separately as per project deliverables.
                 </div>
               </div>
 
@@ -593,11 +624,11 @@ export default function StudioEquipmentRentals({ onOpenConsultation }) {
 
               <div className="mt-8 flex flex-col gap-2.5">
                 <a
-                  href="tel:1234567890"
+                  href="tel:+919876543210"
                   className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-rose-600 to-amber-500 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-95 transition-all shadow-[0_0_25px_rgba(225,29,72,0.4)]"
                 >
                   <PhoneCall className="w-4 h-4" />
-                  <span>Reserve Studio Slot (Call 1234567890)</span>
+                  <span>Reserve Studio Slot (Call 9876543210)</span>
                 </a>
 
                 <button

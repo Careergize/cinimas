@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Film, Clapperboard, MapPin, Users, Sparkles } from "lucide-react";
+import { Film, Clapperboard, MapPin, Users } from "lucide-react";
 import { HERO_CONTENT } from "../data/content";
 
 export default function StatsBanner() {
-  const iconList = [Clapperboard, Sparkles, Users, MapPin];
+  const iconList = [Clapperboard, Film, Users, MapPin];
 
   return (
     <section className="relative py-12 border-y border-white/5 bg-[#09090d]/70 backdrop-blur-md">

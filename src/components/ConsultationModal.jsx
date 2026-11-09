@@ -117,7 +117,7 @@ export default function ConsultationModal({ isOpen, onClose, initialService }) {
                     <input
                       type="tel"
                       required
-                      placeholder="e.g. 88919 61116"
+                      placeholder="e.g. 98765 43210"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full bg-[#14141c] border border-white/10 rounded-2xl pl-9 pr-3 py-2.5 text-xs text-white placeholder:text-neutral-600 focus:outline-none focus:border-white/40"

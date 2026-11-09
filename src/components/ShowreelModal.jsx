@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Film, Sparkles } from "lucide-react";
+import { X, Film } from "lucide-react";
 
 export default function ShowreelModal({ isOpen, onClose }) {
   if (!isOpen) return null;
@@ -39,12 +39,11 @@ export default function ShowreelModal({ isOpen, onClose }) {
         </div>
 
         <div className="mt-4 flex flex-wrap items-center justify-between text-xs text-neutral-400 font-mono">
-          <span className="flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+          <span className="flex items-center gap-1.5 text-neutral-300">
             4K Theatrical Features • Commercial Ads • Color Grading Suite
           </span>
           <span className="text-neutral-500">
-            Thiruvananthapuram, Kerala
+            International Production Hub
           </span>
         </div>
       </motion.div>

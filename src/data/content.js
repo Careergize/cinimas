@@ -1,6 +1,9 @@
 // src/data/content.js
 // Centralized Data File for Grace Cinemas International (GCI)
 import projectorImg from "../assets/projector_loader.jpg";
+import posterServicesImg from "../assets/gci_services_poster.jpg";
+import posterPodcastImg from "../assets/gci_podcast_floor_poster.jpg";
+import posterRentalsImg from "../assets/gci_cine_rentals_poster.jpg";
 
 export const CONTACT_INFO = {
   companyName: "Grace Cinemas International",
@@ -13,15 +16,15 @@ export const CONTACT_INFO = {
     line1: "Rajiv Gandhi Nagar",
     area: "Nalanchira",
     city: "Thiruvananthapuram",
-    state: "Kerala",
+    state: "",
     pincode: "695015",
     country: "India",
-    full: "Rajiv Gandhi Nagar, Nalanchira, Thiruvananthapuram (Trivandrum), Kerala 695015, India",
-    mapsUrl: "https://maps.app.goo.gl/QkT7nFKwDp8AJQAn6"
+    full: "Rajiv Gandhi Nagar, Nalanchira, Thiruvananthapuram (Trivandrum) 695015, India",
+    mapsUrl: "https://maps.app.goo.gl/m7LgaqBXi7QZxq1F8"
   },
-  phone: "+91 88919 61116",
-  phoneRaw: "8891961116",
-  phoneTel: "tel:+918891961116",
+  phone: "+91 98765 43210",
+  phoneRaw: "9876543210",
+  phoneTel: "tel:+919876543210",
   email: "gracecinemasinternational@gmail.com",
   castingEmail: "casting@gracecinemas.in",
   instagram: {
@@ -32,17 +35,18 @@ export const CONTACT_INFO = {
 };
 
 export const NAV_LINKS = [
-  { name: "Home", id: "home", href: "#home" },
+  { name: "Home", id: "home", href: "#hero" },
   { name: "Productions", id: "productions", href: "#productions" },
   { name: "Services", id: "services", href: "#services" },
   { name: "Casting", id: "casting", href: "#casting" },
-  { name: "Our Story", id: "story", href: "#story" },
+  { name: "BTS Gallery", id: "bts", href: "#bts" },
+  { name: "About", id: "about", href: "#about" },
   { name: "Contact", id: "contact", href: "#contact" }
 ];
 
 export const HERO_CONTENT = {
   headline: "Stories That Resonate. Cinema That Endures.",
-  tagline: "A premier independent film production house & creative studio in Kerala, dedicated to bringing compelling visual narratives to life.",
+  tagline: "A premier independent film production house & creative studio, dedicated to bringing compelling visual narratives to life globally.",
   stats: [
     {
       value: "12+",
@@ -55,12 +59,12 @@ export const HERO_CONTENT = {
       subtext: "Brand Ads & Digital Campaigns"
     },
     {
-      value: "Statewide",
+      value: "Global",
       label: "Casting Network",
-      subtext: "Across 14 Districts of Kerala"
+      subtext: "International Talent Network"
     },
     {
-      value: "Trivandrum",
+      value: "Studio HQ",
       label: "Studio Facility",
       subtext: "Acoustic Lounge & Tech Hub"
     }
@@ -77,13 +81,13 @@ export const HERO_CONTENT = {
       tag: "Advertising"
     },
     {
-      title: "Statewide Casting & Talent",
-      desc: "Character breakdowns, scouting, screen tests, and talent grooming in Kerala",
+      title: "Global Casting & Talent",
+      desc: "Character breakdowns, scouting, screen tests, and talent grooming for international cinema",
       tag: "Casting Desk"
     },
     {
       title: "Line Production & Logistics",
-      desc: "Turnkey location permits, equipment hire, and local production support across Kerala",
+      desc: "Turnkey location permits, equipment hire, and comprehensive production support globally",
       tag: "Line Production"
     }
   ]
@@ -104,7 +108,7 @@ export const PRODUCTIONS = [
     runtime: "134 mins",
     aspectRatio: "2.39:1 DCI CinemaScope",
     language: "Malayalam (with English Subtitles)",
-    castHighlights: "Ensemble Cast from Kerala Indie Circuit"
+    castHighlights: "Acclaimed Ensemble Cast from Indie Cinema"
   },
   {
     id: "kayal-the-backwaters",
@@ -120,7 +124,7 @@ export const PRODUCTIONS = [
     runtime: "128 mins",
     aspectRatio: "2.39:1 Anamorphic",
     language: "Malayalam",
-    castHighlights: "Authentic Coastal Kerala Talent"
+    castHighlights: "Authentic Coastal Screen Talent"
   },
   {
     id: "apex-odyssey-commercial",
@@ -129,7 +133,7 @@ export const PRODUCTIONS = [
     year: "2024",
     category: "Commercial",
     status: "Released",
-    synopsis: "A high-octane commercial film captured across the winding mist-laden hairpin turns of Munnar at sunrise, blending high-speed precision tracking with dramatic Kerala mountain vistas.",
+    synopsis: "A high-octane commercial film captured across winding mist-laden mountain hairpin turns at sunrise, blending high-speed precision tracking with dramatic mountain vistas.",
     posterUrl: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
     trailerUrl: "https://www.youtube.com",
     director: "GCI Commercial Wing",
@@ -145,14 +149,14 @@ export const PRODUCTIONS = [
     year: "2024",
     category: "Short Film",
     status: "Released",
-    synopsis: "A poetic narrative chronicling a 1970s traveling cinema projectionist in rural Malabar who risks everything to screen an unseen print for his village during a torrential monsoon night.",
+    synopsis: "A poetic narrative chronicling a 1970s traveling cinema projectionist who risks everything to screen an unseen print for his village during a torrential monsoon night.",
     posterUrl: projectorImg,
     trailerUrl: "https://www.youtube.com",
     director: "Indie Division",
     runtime: "22 mins",
     aspectRatio: "1.85:1 Academy Flat",
     language: "Malayalam",
-    castHighlights: "Kerala State Award Winner Nominations"
+    castHighlights: "National & International Film Award Nominations"
   },
   {
     id: "monsoon-melodies-music",
@@ -217,18 +221,18 @@ export const SERVICES = [
     title: "Production & Execution",
     category: "Filming & Studio",
     tagline: "Comprehensive on-ground filming, studio sets & cinema equipment",
-    desc: "Equipped with state-of-the-art camera systems, an acoustic studio suite, and turnkey production logistics across all 14 districts of Kerala.",
+    desc: "Equipped with state-of-the-art camera systems, an acoustic studio suite, and turnkey production logistics for international feature films and commercials.",
     items: [
-      { name: "Studio / Podcast", desc: "Acoustically treated studio suite for multi-cam podcasts & interviews" },
+      { name: "Studio / Podcast", desc: "Podcast shooting floor with multi-cam pro cameras, professional lighting & studio-ready environment" },
       { name: "Photography", desc: "Commercial fashion, editorial portraits, product & set stills" },
       { name: "Short Films", desc: "Independent narrative cinema, festival entries & docu-dramas" },
-      { name: "Equipment Rentals", desc: "Cinema cameras, prime lenses, lighting rigs & sound packages" }
+      { name: "Equipment Rentals", desc: "GCR (Grace Cine Rentals) — Basic Creator Kit, Pro Video Kit & Cinema Pro Kit" }
     ],
     features: [
-      "Acoustic Podcast Studio",
+      "Podcast Shooting Floor (Multi-Cam)",
       "Commercial Photography",
       "Independent Short Films",
-      "Cinema Equipment Rentals"
+      "Grace Cine Rentals (3 Pro Kits)"
     ],
     badge: "Studio & Logistics",
     colSpan: "lg:col-span-4"
@@ -253,6 +257,49 @@ export const SERVICES = [
     ],
     badge: "Post Suite & Art",
     colSpan: "lg:col-span-4"
+  }
+];
+
+export const OFFICIAL_POSTERS = [
+  {
+    id: "services-roster",
+    title: "Official Studio Services Roster",
+    badge: "Core Services Flyer",
+    subtitle: "Brand Content, Production Execution & Post Finishing",
+    image: posterServicesImg,
+    tagline: "Let's Build Your Brand Visually.",
+    highlights: [
+      "Brand Content & Advertising (Video, Content, Copywriting, Creative Direction)",
+      "Production & Execution (Studio/Podcast, Photography, Shorts, Rentals)",
+      "Post & Design (Post Production, Graphic Design, Creative Design)"
+    ]
+  },
+  {
+    id: "podcast-floor",
+    title: "Podcast Shooting Floor",
+    badge: "Studio Floor Flyer",
+    subtitle: "Professional Podcast & Interview Setup",
+    image: posterPodcastImg,
+    tagline: "Studio-Ready Multi-Cam Environment",
+    highlights: [
+      "Multi-Cam Setup (Pro Cinema Cameras)",
+      "Professional Studio Lighting & Rim Softboxes",
+      "Studio-Ready Sound-Treated Acoustic Environment",
+      "Post-Production Services Charged Separately"
+    ]
+  },
+  {
+    id: "cine-rentals",
+    title: "GCR — Grace Cine Rentals",
+    badge: "Equipment Rental Flyer",
+    subtitle: "Professional Cinema Gear for Serious Creators",
+    image: posterRentalsImg,
+    tagline: "Lights Up Your Stories • Book Your Gear, Shoot Without Limits",
+    highlights: [
+      "Basic Creator Kit (Compact Run-and-Gun Package)",
+      "Pro Video Kit (Commercial 4K Cinema Package)",
+      "Cinema Pro Kit (Full Cinema Line & Cine Primes)"
+    ]
   }
 ];
 
@@ -281,12 +328,12 @@ export const CASTING_CALLS = [
   },
   {
     id: "casting-03",
-    projectTitle: "Kerala Tourism & Heritage Commercial",
+    projectTitle: "Global Heritage & Tourism Commercial",
     role: "Child Artists (Siblings: Boy & Girl)",
     ageGroup: "7 – 11 Years",
     gender: "Any",
     deadline: "December 12, 2026",
-    location: "Statewide Online Submissions",
+    location: "International Online Submissions",
     requirements: "Spontaneous, expressive, comfortable in front of cinematic cameras. Swimming ability in inland waters is preferred. Guardians must accompany candidates.",
     submissionEmail: "casting@gracecinemas.in"
   },
@@ -297,7 +344,7 @@ export const CASTING_CALLS = [
     ageGroup: "55 – 68 Years",
     gender: "Male",
     deadline: "December 18, 2026",
-    location: "Trivandrum Studio Walk-in",
+    location: "Studio Walk-in Screen Test",
     requirements: "Commanding voice, traditional demeanor, experienced in expressive emotional monologue delivery. Classical art background preferred.",
     submissionEmail: "casting@gracecinemas.in"
   }
@@ -309,7 +356,7 @@ export const BTS_ITEMS = [
     title: "Golden Hour Directing on the Backwaters",
     caption: "Director & DOP aligning the 6K cinema camera rig on a traditional kettuvallam during sunset in Alappuzha.",
     category: "Directing",
-    location: "Alappuzha, Kerala",
+    location: "Alappuzha Waterways Set",
     image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80"
   },
   {
@@ -323,15 +370,15 @@ export const BTS_ITEMS = [
   {
     id: "bts-03",
     title: "Highland Misty Forest Tracking Shot",
-    caption: "Heavy-duty gimbal rig chasing the lead protagonist through the dense tea plantations of Vagamon.",
+    caption: "Heavy-duty gimbal rig chasing the lead protagonist through dense tea plantations.",
     category: "Set Life",
-    location: "Vagamon, Kerala",
+    location: "Highland Forest Set",
     image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=80"
   },
   {
     id: "bts-04",
     title: "Sound-Treated Acoustic Studio Session",
-    caption: "Multitrack audio dubbing and voiceover capture in the GCI Trivandrum sound lounge.",
+    caption: "Multitrack audio dubbing and voiceover capture in the GCI sound lounge.",
     category: "Sound & Dubbing",
     location: "Nalanchira Studio",
     image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=1200&q=80"
@@ -341,7 +388,7 @@ export const BTS_ITEMS = [
     title: "DaVinci Resolve HDR Color Grading Suite",
     caption: "Balancing color science and shadow details on the calibrated reference monitor for theatrical DCP delivery.",
     category: "Post-Production",
-    location: "Color Suite, Trivandrum",
+    location: "Color Suite Studio",
     image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=1200&q=80"
   },
   {
@@ -349,7 +396,7 @@ export const BTS_ITEMS = [
     title: "Clapperboard Action on Commercial Set",
     caption: "Synchronizing dual cameras and timecode on a high-energy corporate television advertisement.",
     category: "Commercial Set",
-    location: "Kochi, Kerala",
+    location: "Commercial Set Stage",
     image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80"
   }
 ];
@@ -364,8 +411,8 @@ export const FAQS = [
     answer: "Active casting calls are published on our website and official Instagram (@gracecinemasinternational). To apply, email your updated portfolio, clear headshots (no heavy filters), intro video (under 60 seconds with self-introduction and language fluency), and showreel link directly to casting@gracecinemas.in with the Role Name in the subject line."
   },
   {
-    question: "Do you offer Line Production and Location Logistics services for outside film crews in Kerala?",
-    answer: "Yes. Grace Cinemas International provides full-scale turnkey line production support for production houses from Mumbai, Chennai, Hyderabad, and abroad filming in Kerala. We manage location permits (Kerala State Film Development Corporation, Forest Dept, Tourism), local crew assembly, technical equipment rentals (cameras, cranes, lighting packages), accommodation, and location transport."
+    question: "Do you offer Line Production and Location Logistics services for visiting film crews?",
+    answer: "Yes. Grace Cinemas International provides full-scale turnkey line production support for production houses and international directors filming on location. We manage filming permits, location scouting, technical equipment rentals (cameras, cranes, lighting packages), accommodation, and location transport."
   },
   {
     question: "What is your typical budget range and turnaround timeline for Commercial Ad Films?",
@@ -377,7 +424,7 @@ export const FAQS = [
   },
   {
     question: "Where is Grace Cinemas International located, and how can we schedule an in-person meeting?",
-    answer: "Our primary studio and creative headquarters is located at Rajiv Gandhi Nagar, Nalanchira, Thiruvananthapuram, Kerala 695015. You can schedule a pre-production meeting or studio tour by calling +91 88919 61116 or writing to gracecinemasinternational@gmail.com."
+    answer: "Our primary studio and creative headquarters is located at Rajiv Gandhi Nagar, Nalanchira, Thiruvananthapuram 695015. You can schedule a pre-production meeting or studio tour by calling +91 98765 43210 or writing to gracecinemasinternational@gmail.com."
   }
 ];
 

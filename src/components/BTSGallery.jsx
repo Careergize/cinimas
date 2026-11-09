@@ -98,7 +98,7 @@ export default function BTSGallery() {
 
                   {/* Location Tag */}
                   <div className="absolute bottom-4 left-4 flex items-center gap-1.5 text-[11px] font-mono text-neutral-300 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
-                    <MapPin className="w-3 h-3 text-rose-400" />
+                    <MapPin className="w-3 h-3 text-amber-400" />
                     <span>{item.location}</span>
                   </div>
                 </div>
@@ -106,7 +106,7 @@ export default function BTSGallery() {
                 {/* Caption Details */}
                 <div className="p-6 sm:p-7 flex flex-col justify-between flex-grow">
                   <h3
-                    className="text-lg font-medium text-white group-hover:text-rose-300 transition-colors tracking-tight line-clamp-1"
+                    className="text-lg font-medium text-white group-hover:text-amber-200 transition-colors tracking-tight line-clamp-1"
                     style={{ fontFamily: "Outfit, sans-serif" }}
                   >
                     {item.title}
