@@ -89,9 +89,8 @@ export default function Preloader({ onComplete }) {
         duration: 0.9,
         ease: [0.76, 0, 0.24, 1], // Luxury cubic-bezier curtain ease
       }}
-      className="fixed inset-0 z-[120] bg-[#07070a] flex flex-col items-center justify-center overflow-hidden select-none cursor-pointer"
+      className="fixed inset-0 z-[120] bg-[#07070a] flex flex-col items-center justify-center overflow-hidden select-none"
       onClick={handleSkip}
-      title="Click or press Esc to enter"
       style={{ willChange: "transform" }}
     >
       {/* 1. Ambient Theater Backlight Glow & Light Gold Frame ("light gold border not this much") */}
@@ -284,17 +283,6 @@ export default function Preloader({ onComplete }) {
         </motion.div>
 
       </div>
-
-      {/* 4. Minimalist Skip Hint */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.4 }}
-        whileHover={{ opacity: 0.9 }}
-        transition={{ delay: 0.6, duration: 0.4 }}
-        className="absolute bottom-6 sm:bottom-8 right-6 sm:right-10 text-[10px] sm:text-xs font-mono uppercase tracking-widest text-neutral-400 pointer-events-auto"
-      >
-        <span>Click or press <kbd className="px-1.5 py-0.5 rounded bg-white/10 text-neutral-200">Esc</kbd> to skip</span>
-      </motion.div>
 
     </motion.div>
   );
